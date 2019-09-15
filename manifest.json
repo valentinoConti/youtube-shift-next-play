@@ -1,0 +1,33 @@
+{
+  "name": "Youtube Shift Next-Play",
+  "version": "1.0",
+  "description": "Fast A.F Next-Play Youtube playlist extension. just press Shift and click your next videos to play.",
+  "author": "Valentino Conti",
+  "permissions": ["declarativeContent", "storage"],
+  "content_scripts": [
+    {
+      "matches": ["*://*.youtube.com/*"],
+      "js": ["script.js"]
+    }
+  ],
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+  "page_action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "images/icon.png",
+      "32": "images/icon.png",
+      "48": "images/icon.png",
+      "128": "images/icon.png"
+    }
+  },
+  "icons": {
+    "16": "images/icon.png",
+    "32": "images/icon.png",
+    "48": "images/icon.png",
+    "128": "images/icon.png"
+  },
+  "manifest_version": 2
+}
